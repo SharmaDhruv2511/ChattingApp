@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "346449445292",
+    "project_id": "puchat-4cf71",
+    "storage_bucket": "puchat-4cf71.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:346449445292:android:1a20059f83451d3aefba09",
+        "android_client_info": {
+          "package_name": "com.example.messageapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "346449445292-ocb790k0pg5m989avci3ebo2714nep98.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.messageapp",
+            "certificate_hash": "ceef0a9a6fc7f252b47ecb725d3183816bb7fd7d"
+          }
+        },
+        {
+          "client_id": "346449445292-f024i634agjaiam1lm6ivm6cigb2jdt8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzNkiUeFopA-v-5Ib2Z24PdDFWhqDxlLY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "346449445292-f024i634agjaiam1lm6ivm6cigb2jdt8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "346449445292-5v4qu8qasireneqsa38ra5uog9l0aph6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.messageapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
