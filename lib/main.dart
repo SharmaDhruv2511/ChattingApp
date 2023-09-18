@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_notification_channel/flutter_notification_channel.dart';
 import 'package:flutter_notification_channel/notification_importance.dart';
-import 'package:flutter_notification_channel/notification_visibility.dart';
 import 'package:messageapp/screens/splash_screen.dart';
 
 import 'firebase_options.dart';
@@ -16,11 +15,12 @@ late Size mq;
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
-  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]).then((value){
+  SystemChrome.setPreferredOrientations(
+          [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown])
+      .then((value) {
     _initializeFirebase();
     runApp(const MyApp());
   });
-
 }
 
 class MyApp extends StatelessWidget {
@@ -37,8 +37,10 @@ class MyApp extends StatelessWidget {
           centerTitle: true,
           elevation: 1,
           backgroundColor: Colors.white,
-          titleTextStyle: TextStyle(color: Colors.black, fontWeight: FontWeight.normal, fontSize: 19),),
+          titleTextStyle: TextStyle(
+              color: Colors.black, fontWeight: FontWeight.normal, fontSize: 19),
         ),
+      ),
       home: SplashScreen(),
     );
   }
@@ -56,6 +58,4 @@ _initializeFirebase() async {
     name: 'Chats',
   );
   log(result);
-
 }
-

@@ -32,21 +32,26 @@ class _ViewProfileScreen extends State<ViewProfileScreen> {
               onPressed: () => Navigator.pop(context, false),
             ),
           ),
-
-          floatingActionButton: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text('Joined On :', style: TextStyle(color: Colors.black87, fontWeight: FontWeight.w500, fontSize: 16),),
-                Text(
-                  MyDateUtil.getLastMessageTime(context: context, time: widget.user.createdAt, showYear: true),
-                  style: TextStyle(
-                      color: Colors.black54,
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold),
-                ),
-              ]
-          ),
-
+          floatingActionButton:
+              Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+            Text(
+              'Joined On :',
+              style: TextStyle(
+                  color: Colors.black87,
+                  fontWeight: FontWeight.w500,
+                  fontSize: 16),
+            ),
+            Text(
+              MyDateUtil.getLastMessageTime(
+                  context: context,
+                  time: widget.user.createdAt,
+                  showYear: true),
+              style: TextStyle(
+                  color: Colors.black54,
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold),
+            ),
+          ]),
           backgroundColor: Color.fromARGB(255, 234, 248, 255),
           body: Padding(
             padding: EdgeInsets.symmetric(horizontal: mq.width * .05),
@@ -82,21 +87,22 @@ class _ViewProfileScreen extends State<ViewProfileScreen> {
                   SizedBox(
                     height: mq.height * .02,
                   ),
-
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text('About :', style: TextStyle(color: Colors.black87, fontWeight: FontWeight.w500, fontSize: 16),),
-                      Text(
-                        widget.user.about,
-                        style: TextStyle(
-                            color: Colors.black54,
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold),
-                      ),
-                    ]
-                  ),
-
+                  Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                    Text(
+                      'About :',
+                      style: TextStyle(
+                          color: Colors.black87,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 16),
+                    ),
+                    Text(
+                      widget.user.about,
+                      style: TextStyle(
+                          color: Colors.black54,
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ]),
                 ],
               ),
             ),

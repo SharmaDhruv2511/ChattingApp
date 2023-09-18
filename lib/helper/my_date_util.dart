@@ -29,8 +29,8 @@ class MyDateUtil {
   //get last message time (used in chat user card)
   static String getLastMessageTime(
       {required BuildContext context,
-        required String time,
-        bool showYear = false}) {
+      required String time,
+      bool showYear = false}) {
     final DateTime sent = DateTime.fromMillisecondsSinceEpoch(int.parse(time));
     final DateTime now = DateTime.now();
 

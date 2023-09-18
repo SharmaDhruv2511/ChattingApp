@@ -22,7 +22,6 @@ class ProfileDialog extends StatelessWidget {
         height: mq.height * .35,
         child: Stack(
           children: [
-
             Positioned(
               left: mq.width * .1,
               top: mq.height * .075,
@@ -38,7 +37,6 @@ class ProfileDialog extends StatelessWidget {
                 ),
               ),
             ),
-
             Positioned(
               left: mq.width * .04,
               top: mq.height * .02,
@@ -48,14 +46,16 @@ class ProfileDialog extends StatelessWidget {
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
               ),
             ),
-
             Positioned(
               right: 8,
               top: 6,
               child: MaterialButton(
                   onPressed: () {
                     Navigator.pop(context);
-                    Navigator.push(context, MaterialPageRoute(builder: (_)=> ViewProfileScreen(user: user)));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (_) => ViewProfileScreen(user: user)));
                   },
                   shape: CircleBorder(),
                   minWidth: 0,

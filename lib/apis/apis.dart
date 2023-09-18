@@ -1,13 +1,11 @@
 import 'dart:convert';
 import 'dart:developer';
 import 'dart:io';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:http/http.dart';
-
 import '../models/chat_user.dart';
 import '../models/message.dart';
 
@@ -49,7 +47,6 @@ class APIs {
         log('Push Token: $t');
       }
     });
-
   }
 
   // for sending push notification
@@ -72,7 +69,7 @@ class APIs {
           headers: {
             HttpHeaders.contentTypeHeader: 'application/json',
             HttpHeaders.authorizationHeader:
-            'key=AAAAUKn_Aaw:APA91bFNJnFRuC3euhqJdQ4siX50z_SKtLXXJMXTbmrpcKymJb0A57_4h5lMrw_42RM8W2U6pQLFiedDau7h-h7G8o-zQUAsTHj2SKx04798e4vBoId5UJ_uuJhyOuUN6IZCu0mQkPvM'
+                'key=AAAAUKn_Aaw:APA91bFNJnFRuC3euhqJdQ4siX50z_SKtLXXJMXTbmrpcKymJb0A57_4h5lMrw_42RM8W2U6pQLFiedDau7h-h7G8o-zQUAsTHj2SKx04798e4vBoId5UJ_uuJhyOuUN6IZCu0mQkPvM'
           },
           body: jsonEncode(body));
       log('Response status: ${res.statusCode}');
@@ -170,10 +167,10 @@ class APIs {
     return firestore
         .collection('users')
         .where('id',
-        whereIn: userIds.isEmpty
-            ? ['']
-            : userIds) //because empty list throws an error
-    // .where('id', isNotEqualTo: user.uid)
+            whereIn: userIds.isEmpty
+                ? ['']
+                : userIds) //because empty list throws an error
+        // .where('id', isNotEqualTo: user.uid)
         .snapshots();
   }
 

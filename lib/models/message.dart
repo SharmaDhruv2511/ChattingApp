@@ -7,6 +7,7 @@ class Message {
     required this.fromId,
     required this.sent,
   });
+
   late final String toId;
   late final String msg;
   late final String read;
@@ -14,7 +15,7 @@ class Message {
   late final String fromId;
   late final String sent;
 
-  Message.fromJson(Map<String, dynamic> json){
+  Message.fromJson(Map<String, dynamic> json) {
     toId = json['toId'].toString();
     msg = json['msg'].toString();
     read = json['read'].toString();
@@ -35,4 +36,4 @@ class Message {
   }
 }
 
-enum Type {text, image}
+enum Type { text, image }

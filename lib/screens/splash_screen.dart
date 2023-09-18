@@ -14,25 +14,25 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreen extends State<SplashScreen> {
-
-
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    Future.delayed(Duration(milliseconds: 2000), (){
+    Future.delayed(Duration(milliseconds: 2000), () {
       setState(() {
         SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
-        SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(systemNavigationBarColor: Colors.white, statusBarColor: Colors.white));
+        SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+            systemNavigationBarColor: Colors.white,
+            statusBarColor: Colors.white));
 
-        if(APIs.auth.currentUser!=null){
+        if (APIs.auth.currentUser != null) {
           print('\nUser: ${APIs.auth.currentUser}');
-          Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=> HomeScreen()));
-        }else{
-          Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=> LoginScreen()));
+          Navigator.pushReplacement(
+              context, MaterialPageRoute(builder: (_) => HomeScreen()));
+        } else {
+          Navigator.pushReplacement(
+              context, MaterialPageRoute(builder: (_) => LoginScreen()));
         }
-
-
       });
     });
   }
@@ -48,13 +48,18 @@ class _SplashScreen extends State<SplashScreen> {
               top: mq.height * .15,
               right: mq.width * .25,
               width: mq.width * .5,
-              child: Image.asset("images/chat.png", )
-          ),
+              child: Image.asset(
+                "images/chat.png",
+              )),
           Positioned(
               bottom: mq.height * .15,
               width: mq.width,
-              child: Text("Chat App", style: TextStyle(fontSize: 16, color: Colors.black87, letterSpacing: .5),textAlign: TextAlign.center,)
-          )
+              child: Text(
+                "Chat App",
+                style: TextStyle(
+                    fontSize: 16, color: Colors.black87, letterSpacing: .5),
+                textAlign: TextAlign.center,
+              ))
         ],
       ),
     );
