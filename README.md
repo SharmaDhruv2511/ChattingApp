@@ -4,7 +4,9 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Discover seamless communication with our user-friendly chatting app. Stay connected with 
+friends and family through text. Share photos, videos, and memories effortlessly while enjoying a safe 
+and interactive chatting experience.
 
 A few resources to get you started if this is your first Flutter project:
 
